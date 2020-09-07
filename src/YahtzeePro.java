@@ -1,28 +1,32 @@
 //package YahtzeeCode;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
 
-//public class DiceGUI extends JFrame implements  ActionListener{}
 
-public class YahtzeePro {
+
+
+public class YahtzeePro extends JPanel {
 
     static JLabel result = new JLabel("");
 
+
+
+
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("YahtzeePro");
-        frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         frame.setSize(1000,1000);
         JPanel panel = new JPanel();
         frame.add(panel);
         panel.add(result);
 
-        
+
         JButton button = new JButton("Roll!");
         panel.add(button);
         frame.setVisible(true);
@@ -37,6 +41,12 @@ public class YahtzeePro {
                 result.setText("You got a " + num);
                 panel.add(result);
 
+                DiceRoll d = new DiceRoll();
+                panel.add(d);
+                DiceRoll.square(panel.getGraphics());
+
+
+
 
 
                 /* print the result */
@@ -47,7 +57,11 @@ public class YahtzeePro {
                 //JTextField result = new JTextField("You got a " +num);
                 //panel.add(result);
                 //JOptionPane.showMessageDialog(null, "You got a " +num);
+
+
             }
+
+
         }); {
         };
 //
@@ -71,6 +85,7 @@ public class YahtzeePro {
 //
 //            }
 //        }
+
 
     }
 

@@ -4,8 +4,14 @@ public class DiceRoll extends JComponent {
 
     public static void square(Graphics g)
     {
-        System.out.println("Trying to print dice");
-        g.drawRect(10,50,100,100);
+        for(int i=0; i<5; i++) {
+            int x=50;
+            System.out.println("Trying to print dice");
+            g.drawRect(x+(250*i), 50, 100, 100);
+            g.setColor(Color.black);
+            g.fillRect(x+(250*i), 50, 100, 100);
+        }//for
+
     }
 
 }

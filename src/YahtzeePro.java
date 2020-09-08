@@ -21,7 +21,7 @@ public class YahtzeePro extends JPanel {
         JFrame frame = new JFrame("YahtzeePro");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
-        frame.setSize(1000,1000);
+        frame.setSize(1185,1185);
         JPanel panel = new JPanel();
         frame.add(panel);
         panel.add(result);

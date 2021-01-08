@@ -7,7 +7,9 @@ public class DiceRoll extends JComponent {
         g.drawRect(distance, 50, 100, 100);     //create a black square
         g.setColor(Color.black);
         g.fillRect(distance, 50, 100, 100);
-
+        JCheckBox b = new JCheckBox("Keep",false);
+        b.setVisible(true);
+        b.setBounds(60,60,15,15);
 
         switch (num) {
             //print and fill circles on the squares to look like dice
@@ -76,4 +78,6 @@ public class DiceRoll extends JComponent {
 
     }
 }
+
+
 

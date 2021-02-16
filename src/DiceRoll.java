@@ -5,7 +5,8 @@ public class DiceRoll extends JComponent {
     public static void square(Graphics g, int distance, int num) {
         System.out.println("Trying to print dice");
         g.drawRect(distance, 50, 100, 100);     //create a black square
-        g.setColor(Color.black);
+        Color mycolour = new Color(0, 165, 190);
+        g.setColor(mycolour);
         g.fillRect(distance, 50, 100, 100);
         JCheckBox b = new JCheckBox("Keep",false);
         b.setVisible(true);
@@ -15,13 +16,13 @@ public class DiceRoll extends JComponent {
             //print and fill circles on the squares to look like dice
             case 1:
                 g.drawOval(distance+40, 90, 15, 15);       //dice value 1
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+40, 90, 15, 15);
                 break;      //fill
             case 2:
                 g.drawOval(distance+16, 66, 15, 15);       //dice value 2
                 g.drawOval(distance+65, 115, 15, 15);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+16, 66, 15, 15);
                 g.fillOval(distance+65, 115, 15, 15);
                 break;
@@ -29,7 +30,7 @@ public class DiceRoll extends JComponent {
                 g.drawOval(distance+16, 66, 15, 15);       //dice value 3
                 g.drawOval(distance+65, 115, 15, 15);
                 g.drawOval(distance+40, 90, 15, 15);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+16, 66, 15, 15);
                 g.fillOval(distance+65, 115, 15, 15);
                 g.fillOval(distance+40, 90, 15, 15);
@@ -39,7 +40,7 @@ public class DiceRoll extends JComponent {
                 g.drawOval(distance+16, 115, 15, 15);
                 g.drawOval(distance+65, 66, 15, 15);
                 g.drawOval(distance+65, 115, 15, 15);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+16, 66, 15, 15);
                 g.fillOval(distance+16, 115, 15, 15);
                 g.fillOval(distance+65, 66, 15, 15);
@@ -51,7 +52,7 @@ public class DiceRoll extends JComponent {
                 g.drawOval(distance+65, 66, 15, 15);
                 g.drawOval(distance+65, 115, 15, 15);
                 g.drawOval(distance+40, 90, 15, 15);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+16, 66, 15, 15);
                 g.fillOval(distance+16, 115, 15, 15);
                 g.fillOval(distance+65, 66, 15, 15);
@@ -65,7 +66,7 @@ public class DiceRoll extends JComponent {
                 g.drawOval(distance+65, 115, 15, 15);
                 g.drawOval(distance+65, 90, 15, 15);
                 g.drawOval(distance+65, 66, 15, 15);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.fillOval(distance+16, 66, 15, 15);
                 g.fillOval(distance+16, 90, 15, 15);
                 g.fillOval(distance+16, 115, 15, 15);

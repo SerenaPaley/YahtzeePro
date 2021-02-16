@@ -24,30 +24,30 @@ public class YahtzeePro extends JPanel {
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
-        panel.setBounds(0, 0, width, height);
+        panel.setBounds(0, 0, width, height/5);
 
         panel.add(result);
 
         JCheckBox box[] = new JCheckBox[6];   //make 5 new checkboxes (no box[0])**
         //checkboxes **
         box[1] = new JCheckBox("Keep", false);
-        box[1].setLocation(50, 125);
+        box[1].setLocation(50, 155);
         box[1].setSize(190, 100);
 
         box[2] = new JCheckBox("Keep", false);
-        box[2].setLocation(260, 125);
+        box[2].setLocation(260, 155);
         box[2].setSize(190, 100);
 
         box[3] = new JCheckBox("Keep", false);
-        box[3].setLocation(460, 125);
+        box[3].setLocation(460, 155);
         box[3].setSize(190, 100);
 
         box[4]= new JCheckBox("Keep", false);
-        box[4].setLocation(660, 125);
+        box[4].setLocation(660, 155);
         box[4].setSize(190, 100);
 
         box[5] = new JCheckBox("Keep", false);
-        box[5].setLocation(860, 125);
+        box[5].setLocation(860, 155);
         box[5].setSize(190, 100);
 
         JButton button = new JButton("Roll!");
@@ -65,6 +65,20 @@ public class YahtzeePro extends JPanel {
         panel.add(box[5]);
         panel.add(button);
         //panel2.setLocation(0, 301);
+
+        JButton testButton = new JButton("hello!");
+        testButton.setLocation(width/2, height/2);
+        testButton.setSize(new Dimension(150, 48));
+//        panel.add(testButton);
+        //make new score sheet
+        ScoreSheet scoreSheet = new ScoreSheet(width, height);
+        panel.add(scoreSheet.panel);
+        //scoreSheet.sheet (panel.getGraphics());
+
+
+
+
+
 
 
         button.addActionListener(new ActionListener() {
@@ -95,11 +109,10 @@ public class YahtzeePro extends JPanel {
 
         });
 
-        ScoreSheet card = new ScoreSheet();
-        panel.add(card);
-        //card.grid();
-        System.out.println("making a sheet");
+
         frame.add(panel);
+        //frame.add(scoreSheet);
+
         frame.setVisible(true);
 
 
